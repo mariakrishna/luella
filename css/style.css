@@ -311,7 +311,7 @@ input:checked + .slider:before {
   }
 } 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .sample-videos {
     gap: 40px;
     margin-bottom: 80px;
@@ -538,7 +538,7 @@ input:checked + .slider:before {
     letter-spacing: 7px;
   }
 
-  li {
+  .disco li {
     width: 100%; 
   }
 }
@@ -575,4 +575,317 @@ input:checked + .slider:before {
   display: flex;
   padding: 60px 0;
   justify-content: space-between;
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.events-item {
+  font-family: var(--font-main);
+  font-size: 20px;
+  line-height: 26px;
+  position: relative;
+  max-width: 400px;
+  max-height: 300px;
+  width: calc(50% - 30px); 
+  margin: 0 15px 20px 0; 
+  box-sizing: border-box;
+  color: var(--turq-00);
+  background-color: var(--turq-09);
+  padding: 22px 30px 450px 30px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px var(--turq-01);
+}
+
+.events-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.row-2 {
+  margin-top: 40px;
+}
+
+.event-date {
+  margin: 0 0 8px 32px;
+}
+
+.event-adress {
+  margin: 0 0 20px 32px;
+}
+
+.event-date::before {
+  content: '';
+  height: 38px;
+  width: 38px;
+  background: url('../img/events-calendar.svg');
+  position: absolute;
+  left: 20px;
+  top: 18px;
+}
+
+.event-adress::before {
+  content: '';
+  height: 32px;
+  width: 32px;
+  background: url('../img/events-location.svg');
+  position: absolute;
+  left: 25px;
+  top: 64px;
+}
+
+.events-link {
+  box-sizing: border-box;
+  border-radius: 20px;
+  overflow: hidden; /* Impede que a imagem ultrapasse as bordas do contêiner */
+}
+
+.events-img {
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  height: 300px; /* Altura menor para o efeito parallax */
+  border: 2px solid var(--turq-05);
+  border-radius: 20px;
+  filter: sepia(100%); /* Aplica efeito sepia inicialmente */
+  transition: filter 0.8s ease; /* Adiciona uma transição suave */
+}
+
+.events-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 1;
+  transform: translateZ(-1px) scale(1.2);
+}
+
+.events-img.item1::before {
+  background-image: url('../img/flyer1_1.jpg');
+}
+
+.events-img.item2::before {
+  background-image: url('../img/flyer2.jpg');
+}
+
+.events-img.item3::before {
+  background-image: url('../img/flyer3_1.jpg');
+}
+
+.events-img:hover {
+  filter: none; /* Remove o efeito sepia ao passar o mouse */
+}
+
+@media only screen and (max-width: 960px) {
+  #events {
+    padding: 0px 20px 20px 20px;
+  }
+
+  .events-container {
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (max-width: 760px) {
+    .events-item {
+      min-height: 100px;
+      padding: 12px 20px 450px 20px;
+    }
+    .event-date, .event-adress {
+      margin: 10px 0 0 44px;
+    }
+
+    .event-adress {
+      padding-bottom: 10px;
+    }
+  }
+  @media only screen and (max-width: 565px) {
+    .events-header img {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .events-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .events-item {
+      width: 100%;
+    }
+    
+    .events-header {
+      padding: 30px 0;
+    }
+
+    .events-header h2 {
+      margin-top: 20px;
+    }
+  }
+}
+
+.contact-bg {
+  background-color: var(--turq-02);
+  color: var(--turq-09);
+  padding-top: 40px;
+}
+
+.contact-title {
+  margin: 20px 0 40px 0;
+}
+
+.contact-info {
+  display: flex;
+  gap: 100px;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.sns-contact {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 320px;
+  justify-content: space-evenly;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  min-width: 550px;
+}
+
+.col-2 {
+  grid-column: span 2 ;
+}
+
+.contact-form input[type='text'],
+.contact-form input[type='email'],
+.contact-form textarea {
+  color: var(--turq-06);
+  font-size: 20px;
+  line-height: 1.5;
+  background: var(--turq-01);
+  font-weight: 700;
+  border-radius: 20px;
+  border: var(--turq-07) solid 2px;
+  padding: 12px 0 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-form input[type='text']::placeholder,
+.contact-form input[type='email']::placeholder,
+.contact-form textarea::placeholder {
+  font-family: var(--font-main);
+  color: var(--turq-06);
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.contact-form input[type='text']:focus,
+.contact-form input[type='email']:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--turq-07);
+  background-color: var(--turq-00);
+  box-shadow: 0 0 0 2px var(--turq-10);
+}
+
+.contact-form button {
+  display: block;
+  width: 200px;
+  background-color: var(--turq-01);
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
+  color: var(--turq-07);
+  border: var(--turq-07) solid 2px;
+  padding: 12px 0;
+  grid-row: 4; /* Linha 4 */
+  grid-column: 2; /* Coluna 2 */
+  box-shadow: 8px 8px 0 -4px  var(--turq-00),
+              8px 8px 0 0 var(--turq-02);
+  transition: .3s;
+  &:hover {
+    box-shadow: 6px 6px 0 -4px  var(--turq-00),
+                6px 6px 0 0 var(--turq-02);
+  }
+}
+
+.footer {
+  padding: 20px;
+  background-color: var(--turq-02);
+  text-align: center;
+}
+
+.footer p {
+  color: var(--turq-10);
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: var(--font-main);
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: var(--turq-07); 
+}
+
+.footer a:hover {
+  color: var(--turq-10); 
+}
+
+@media only screen and (max-width: 960px) {
+  .contact-bg {
+    padding: 24px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .contact-info {
+    gap: 50px;
+  }
+
+  .sns-contact {
+    gap: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-form {
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .contact-info {
+    flex-direction: column-reverse;
+  }
+
+  .contact-title {
+    margin: 10px 0 20px 0;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .contact-form {
+    min-width: 280px;
+  }
+
+  .contact-title {
+    font-size: 30px;
+    line-height: 1.8;
+    letter-spacing: 7px;
+  }
 }
