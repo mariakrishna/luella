@@ -329,6 +329,14 @@ input:checked + .slider:before {
   text-shadow: 4px 4px 5px var(--turq-09);
 }
 
+#light .main h2 {
+  text-shadow: 4px 4px 5px var(--turq-09);
+}
+
+#dark .main h2 {
+  text-shadow: 4px 4px 5px var(--turq-01);
+}
+
 .img-main {
   position: absolute;
   top: -190px;
