@@ -19,13 +19,16 @@
         <li><a href="#events">Events</a></li>
         <li><a href="#contact">Call me</a></li>
         <li><label class="switch">
-          <input type="checkbox" id="toggleTheme">
+          <input type="checkbox" class="theme-toggle" id="toggleTheme">
           <span class="slider round">
             <div class="slider-image" id="sliderImage"></div>
-          </span></li>
+          </span>
+        </label></li>
       </ul>
-      <div class="burger-menu">&#9776;</div>
-        </span>
+      <label for="burger-menu">
+        <input type="checkbox" class="burger-menu-input">
+        <div class="burger-menu">&#9776;</div>
+      </label>
     </nav>
   </label>
   </header>
@@ -33,12 +36,12 @@
    <div class="main container">
     <h2>A Bad Start</h2>
     <div class="main-img-container">
-      <img src="./img/photo-main-light.jpg" class="img-main container" alt="Luella">
+      <img id="mainImage" src="./img/photo-main-light.jpg" class="img-main container" alt="Luella">
     </div>
    </div>
   </main>
   <div class="separador">
-    <img src="./img/separator.png" class="separador-img">
+    <img src="./img/separator-light.png" id="separador01" class="separador-img">
   </div>
 <section class="sns-sample container">
   <div class="sample-videos">
@@ -50,13 +53,27 @@
     </div>
   </div>
   <div class="sns-icons">
-    <a href="https://www.youtube.com/channel/UCtqdLLFQFWyWG7Scy7GgFVA" target="_blank"><img src="./img/yt-icon.svg"></a>
-    <a href="https://open.spotify.com/artist/3dzhc5YlGtNsKshBYYIObx" target="_blank"><img src="./img/spotify-icon.svg"></a>
-    <a href="https://music.apple.com/us/artist/luella/1486713885" target="_blank"><img src="./img/apple-icon.svg"></a>
-    <a href="https://www.deezer.com/us/artist/5067041" target="_blank"><img src="./img/deezer-icon.svg"></a>
-    <a href="https://www.tiktok.com/@luellawho" target="_blank"><img src="./img/tt-icon.svg"></a>
-    <a href="https://www.instagram.com/luellawho/" target="_blank"><img src="./img/insta-icon.svg"></a>
-    <a href="https://twitter.com/luella_who" target="_blank"><img src="./img/x-twitter-icon.svg"></a>
+    <a class="sns-icons-link" href="https://www.youtube.com/channel/UCtqdLLFQFWyWG7Scy7GgFVA" target="_blank">
+      <img id="iconYT" src="./img/yt-icon.svg">
+    </a>
+    <a class="sns-icons-link" href="https://open.spotify.com/artist/3dzhc5YlGtNsKshBYYIObx" target="_blank">
+      <img id="iconSpot" src="./img/spotify-icon.svg">
+    </a>
+    <a class="sns-icons-link" href="https://music.apple.com/us/artist/luella/1486713885" target="_blank">
+      <img id="iconApple" src="./img/apple-icon.svg">
+    </a>
+    <a class="sns-icons-link" href="https://www.deezer.com/us/artist/5067041" target="_blank">
+      <img id="iconDeezer" src="./img/deezer-icon.svg">
+    </a>
+    <a class="sns-icons-link" href="https://www.tiktok.com/@luellawho" target="_blank">
+      <img id="iconTT" src="./img/tt-icon.svg">
+    </a>
+    <a class="sns-icons-link" href="https://www.instagram.com/luellawho/" target="_blank">
+      <img id="iconInsta" src="./img/insta-icon.svg">
+    </a>
+    <a class="sns-icons-link" href="https://twitter.com/luella_who" target="_blank">
+      <img id="iconXTT" src="./img/x-twitter-icon.svg">
+    </a>
   </div>
 </section>
 <div class="paralax-spf">
@@ -71,7 +88,7 @@
     <div class="who-text">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus scelerisque ultrices. Sed mattis egestas scelerisque. Proin a augue vel neque porta euismod. In commodo urna ante, et ullamcorper leo dignissim vel. Vivamus pulvinar est vitae placerat posuere. Suspendisse pulvinar, tellus ut convallis lacinia, tellus arcu hendrerit dolor, ut ultricies erat urna at est. Etiam consequat, metus in gravida iaculis, enim dolor aliquet ante, ut facilisis est orci vitae massa. Etiam et ultrices risus. Curabitur non est eget nisi dictum consequat. Mauris sit amet dui sit amet elit sagittis varius vitae auctor felis. Integer id eros convallis, tincidunt odio pulvinar, porta nunc. Sed vitae magna sed mi placerat sollicitudin.
       Nullam tempus interdum mi nec egestas. Proin aliquam pharetra nisi, eget pharetra odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec non mi in nisl iaculis volutpat ornare et nunc. Integer pretium efficitur nisl sit amet tempus. Sed facilisis rutrum nulla, vitae suscipit neque scelerisque quis. Proin ut mattis elit.</p>
-      <img class="separador-who" src="./img/separator-who.png">
+      <img id="separatorWho" class="separador-who" src="./img/separator-who.png">
     </div>
   </div>
 </section>
@@ -147,7 +164,7 @@
 </section>
 <section id="events" class="container">
   <div class="events-header">
-    <img src="./img/events-decorador.png">
+    <img id="eventsDecorator" src="./img/events-decorador.png">
     <h2 class="section-title align-title-right">Events</h2>
   </div>
 
